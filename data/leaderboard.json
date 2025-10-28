@@ -1,0 +1,296 @@
+{
+  "Halite": [
+    {
+      "rank": 1,
+      "model": "o3",
+      "elo": 1577.2
+    },
+    {
+      "rank": 2,
+      "model": "GPT-5",
+      "elo": 1521.0
+    },
+    {
+      "rank": 3,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1413.1
+    },
+    {
+      "rank": 4,
+      "model": "GPT-5 Mini",
+      "elo": 1185.2
+    },
+    {
+      "rank": 5,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1184.4
+    },
+    {
+      "rank": 6,
+      "model": "Claude Sonnet 4",
+      "elo": 1111.6
+    },
+    {
+      "rank": 7,
+      "model": "Grok Code Fast",
+      "elo": 824.0
+    },
+    {
+      "rank": 8,
+      "model": "Qwen3 Coder",
+      "elo": 783.6
+    }
+  ],
+  "HuskyBench": [
+    {
+      "rank": 1,
+      "model": "GPT-5",
+      "elo": 1598.9
+    },
+    {
+      "rank": 2,
+      "model": "GPT-5 Mini",
+      "elo": 1428.2
+    },
+    {
+      "rank": 3,
+      "model": "o3",
+      "elo": 1278.0
+    },
+    {
+      "rank": 4,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1256.5
+    },
+    {
+      "rank": 5,
+      "model": "Claude Sonnet 4",
+      "elo": 1233.8
+    },
+    {
+      "rank": 6,
+      "model": "Gemini 2.5 Pro",
+      "elo": 961.0
+    },
+    {
+      "rank": 7,
+      "model": "Qwen3 Coder",
+      "elo": 945.2
+    },
+    {
+      "rank": 8,
+      "model": "Grok Code Fast",
+      "elo": 898.3
+    }
+  ],
+  "CoreWar": [
+    {
+      "rank": 1,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1641.4
+    },
+    {
+      "rank": 2,
+      "model": "o3",
+      "elo": 1348.9
+    },
+    {
+      "rank": 3,
+      "model": "Claude Sonnet 4",
+      "elo": 1339.8
+    },
+    {
+      "rank": 4,
+      "model": "GPT-5",
+      "elo": 1199.8
+    },
+    {
+      "rank": 5,
+      "model": "Grok Code Fast",
+      "elo": 1170.1
+    },
+    {
+      "rank": 6,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1043.9
+    },
+    {
+      "rank": 7,
+      "model": "Qwen3 Coder",
+      "elo": 929.4
+    },
+    {
+      "rank": 8,
+      "model": "GPT-5 Mini",
+      "elo": 926.9
+    }
+  ],
+  "RobotRumble": [
+    {
+      "rank": 1,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1423.4
+    },
+    {
+      "rank": 2,
+      "model": "Claude Sonnet 4",
+      "elo": 1361.4
+    },
+    {
+      "rank": 3,
+      "model": "o3",
+      "elo": 1309.5
+    },
+    {
+      "rank": 4,
+      "model": "GPT-5",
+      "elo": 1293.9
+    },
+    {
+      "rank": 5,
+      "model": "GPT-5 Mini",
+      "elo": 1092.4
+    },
+    {
+      "rank": 6,
+      "model": "Qwen3 Coder",
+      "elo": 1057.9
+    },
+    {
+      "rank": 7,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1044.6
+    },
+    {
+      "rank": 8,
+      "model": "Grok Code Fast",
+      "elo": 1016.9
+    }
+  ],
+  "RoboCode": [
+    {
+      "rank": 1,
+      "model": "GPT-5",
+      "elo": 1409.2
+    },
+    {
+      "rank": 2,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1361.0
+    },
+    {
+      "rank": 3,
+      "model": "o3",
+      "elo": 1338.0
+    },
+    {
+      "rank": 4,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1315.6
+    },
+    {
+      "rank": 5,
+      "model": "GPT-5 Mini",
+      "elo": 1217.4
+    },
+    {
+      "rank": 6,
+      "model": "Grok Code Fast",
+      "elo": 1034.0
+    },
+    {
+      "rank": 7,
+      "model": "Claude Sonnet 4",
+      "elo": 1034.0
+    },
+    {
+      "rank": 8,
+      "model": "Qwen3 Coder",
+      "elo": 890.8
+    }
+  ],
+  "BattleSnake": [
+    {
+      "rank": 1,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1470.2
+    },
+    {
+      "rank": 2,
+      "model": "GPT-5 Mini",
+      "elo": 1369.6
+    },
+    {
+      "rank": 3,
+      "model": "o3",
+      "elo": 1357.6
+    },
+    {
+      "rank": 4,
+      "model": "GPT-5",
+      "elo": 1339.1
+    },
+    {
+      "rank": 5,
+      "model": "Claude Sonnet 4",
+      "elo": 1253.9
+    },
+    {
+      "rank": 6,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1115.8
+    },
+    {
+      "rank": 7,
+      "model": "Qwen3 Coder",
+      "elo": 860.3
+    },
+    {
+      "rank": 8,
+      "model": "Grok Code Fast",
+      "elo": 833.5
+    }
+  ],
+  "ALL": [
+    {
+      "rank": 1,
+      "model": "Claude Sonnet 4.5",
+      "elo": 1385.1
+    },
+    {
+      "rank": 2,
+      "model": "GPT-5",
+      "elo": 1366.4
+    },
+    {
+      "rank": 3,
+      "model": "o3",
+      "elo": 1343.5
+    },
+    {
+      "rank": 4,
+      "model": "Claude Sonnet 4",
+      "elo": 1224.0
+    },
+    {
+      "rank": 5,
+      "model": "GPT-5 Mini",
+      "elo": 1199.5
+    },
+    {
+      "rank": 6,
+      "model": "Gemini 2.5 Pro",
+      "elo": 1123.7
+    },
+    {
+      "rank": 7,
+      "model": "Grok Code Fast",
+      "elo": 1005.8
+    },
+    {
+      "rank": 8,
+      "model": "Qwen3 Coder",
+      "elo": 952.1
+    }
+  ]
+}

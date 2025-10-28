@@ -48,12 +48,14 @@ def main() -> None:
         raise FileNotFoundError("CNAME file not found. Please create a CNAME file in the root directory.")
 
     # load data as needed
+    leaderboards = json.loads((ROOT / "data" / "leaderboard.json").read_text())
 
     # render all pages
     for tpl_name, out_name in PAGES.items():
         tpl = env.get_template(tpl_name)
         html = tpl.render(
-            title="CodeClash", 
+            title="CodeClash",
+            leaderboards=leaderboards,
         )
         (DIST / out_name).write_text(html)
         print(f"built {out_name}")

@@ -1,0 +1,75 @@
+/* Main styling */
+html, body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base);
+}
+
+body {
+    width: 100%;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+/* Top Navigation Bar - Layout Only */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 1rem;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Leaderboard Table - Layout Only */
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard-table th,
+.leaderboard-table td {
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.leaderboard-table th {
+    font-weight: 600;
+}
+
+.leaderboard-table td:first-child,
+.leaderboard-table th:first-child {
+    text-align: center;
+    width: 5rem;
+}
+
+.leaderboard-table td:last-child,
+.leaderboard-table th:last-child {
+    text-align: right;
+    width: 8rem;
+}

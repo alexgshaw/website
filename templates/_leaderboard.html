@@ -1,0 +1,18 @@
+<table class="leaderboard-table">
+    <thead>
+        <tr>
+            <th>Rank</th>
+            <th>Model</th>
+            <th>ELO</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in leaderboards.ALL %}
+        <tr>
+            <td>{{ entry.rank }}</td>
+            <td>{{ entry.model }}</td>
+            <td>{{ entry.elo }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
