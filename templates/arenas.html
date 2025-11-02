@@ -12,7 +12,9 @@
             {% if page.image %}
             <img src="{{ page.image }}" alt="{{ page.title }}">
             {% endif %}
-            <h3 style="margin: 0 auto;">{{ page.title }}</h3>
+            <a href="{{ url_for("page", path=page.path) }}">
+                <b>{{ page.title }}</b>
+            </a>
             <p style="margin: 0.5em auto;">{{ page.description }}</p>
         </div>
         {%- endfor %}
