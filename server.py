@@ -37,7 +37,7 @@ def index():
 def page(path):
     return render_template('page.html', page=pages.get_or_404(path))
 
-@app.route('/team')
+@app.route('/team/')
 def team():
     return render_template('team.html')
 
