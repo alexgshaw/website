@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}CodeClash{% endblock %}</title>
-    <link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="icon" type="image/svg" href="{{ url_for('static', filename='images/clash.svg') }}">
     {% block head_extra %}{% endblock %}
 </head>
 <body>
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">THEME</button>
+    
     {% include "_topnav.html" %}
 
-    <div class="container">
-        {% block content %}
-        <!-- Page-specific content will be injected here -->
-        {% endblock %}
-    </div>
+    {% block content %}
+    <!-- Page-specific content will be injected here -->
+    {% endblock %}
 
     <!-- Lightbox for images -->
     <div class="lightbox" id="lightbox">
@@ -25,6 +25,46 @@
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script>
+        // Theme toggle functionality
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById('theme-toggle');
+            var media = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+
+            function readStored() {
+                try { return localStorage.getItem('theme'); } catch (e) { return null; }
+            }
+            function writeStored(theme) {
+                try { localStorage.setItem('theme', theme); } catch (e) {}
+            }
+            function effectiveTheme() {
+                var stored = readStored();
+                if (stored === 'dark' || stored === 'light') return stored;
+                return (media && media.matches) ? 'dark' : 'light';
+            }
+            function apply(theme) {
+                root.setAttribute('data-theme', theme);
+                updateLabel();
+            }
+            function updateLabel() {
+                var theme = effectiveTheme();
+                if (!btn) return;
+                btn.textContent = theme === 'dark' ? 'LIGHT' : 'DARK';
+                btn.title = 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode';
+                btn.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+            }
+            function toggle() {
+                var next = effectiveTheme() === 'dark' ? 'light' : 'dark';
+                apply(next);
+                writeStored(next);
+            }
+            if (btn) btn.addEventListener('click', toggle);
+            if (media && media.addEventListener) media.addEventListener('change', function () {
+                if (readStored() == null) apply(effectiveTheme()); else updateLabel();
+            });
+            apply(effectiveTheme());
+        })();
+
         // Image lightbox functionality
         document.addEventListener('DOMContentLoaded', function() {
             const lightbox = document.getElementById('lightbox');

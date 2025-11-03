@@ -1,51 +1,45 @@
 {% extends "base.html" %}
 
 {% block content %}
-<br>
-<div style="text-align:center;">
-  <h2 style="margin: 0 auto;">
-    <img
-      src="{{ page.logo }}"
-      alt="{{ page.title }}"
-      class="img-inline"
-      style="height:1.5rem;"
-    />
-    {{ page.title }}
-  </h2>
-</div>
-<br>
+<section class="hero">
+  <div class="hero-header">
+    <img src="{{ page.logo }}" alt="{{ page.title }}" style="width: 80px; height: 80px; margin-bottom: -20px;">
+    <h1 class="title" style="font-size: 2.5rem;">{{ page.title }}</h1>
+    <p class="subtitle" style="margin-top: 16px; font-size: 1rem;">
+      <span class="subtext">Introduced</span> {{ page['date-added'] | format_timestamp }}
+      &bull;
+      {{ page.players }} <span class="subtext">Players</span>
+      &bull;
+      <span class="subtext">Written in</span>
+      {% for lang in page.language.split(', ') %}
+        <img
+          src="/static/images/languages/{{ lang.lower() }}.svg"
+          alt="{{ lang }}"
+          title="{{ lang }}"
+          style="height:1.2rem;width:auto;vertical-align:text-bottom;">
+        {% if not loop.last %} {% endif %}
+      {% endfor %}
+    </p>
+  </div>
+</section>
 
-<div style="text-align: center">
-  <span class="subtext">Introduced</span> {{ page['date-added'] | format_timestamp }}
-  &bull;
-  {{ page.players }} <span class="subtext">Players</span>
-  &bull;
-  <span class="subtext">Written in</span>
-  {% for lang in page.language.split(', ') %}
-    <img
-      src="/static/images/languages/{{ lang.lower() }}.svg"
-      alt="{{ lang }}"
-      title="{{ lang }}"
-      style="height:1.2rem;width:auto;vertical-align:text-bottom;">
-    {% if not loop.last %} {% endif %}
-  {% endfor %}
-</div>
-<br>
-
-<div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:30px;">
     <img
       src="{{ page.preview }}"
-      style="width:{{ (page.preview_width or 50) }}%; display:block;"
-      alt="{{ page.title }}preview"
+      style="width:{{ (page.preview_width or 50) }}%; display:block; border: 1px solid var(--border);"
+      alt="{{ page.title }} preview"
     />
-    <p style="font-size:0.9em; margin-top:0.5em;width:{{ (page.description_width or 50) }}%;">{{page.description}}</p>
+    <p style="font-size:0.95em; margin-top:1em; width:{{ (page.description_width or 50) }}%; color: var(--muted);">{{page.description}}</p>
 </div>
 
-<div style="width: 75%; margin: 0 auto;">
-  <hr style="margin:1.5em auto;"/>
-  <h3>Leaderboard</h3>
-  {% include "_leaderboard.html" %}
-  <hr style="margin:1.5em auto;"/>
+<div class="container" style="margin-top: 40px; margin-bottom: 60px;">
+  <h2 class="section-title">Leaderboard</h2>
+  <div class="bordered">
+    {% include "_leaderboard.html" %}
+  </div>
+</div>
+
+<div class="story-section">
   {{page.html|safe}}
 </div>
 {% endblock content %}

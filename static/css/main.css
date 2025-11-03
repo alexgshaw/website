@@ -1,5 +1,2 @@
-/* Core Styles */
-@import 'core.css';
-
-/* Layout Styles */
-@import 'layout.css';
+/* Main CSS - Importing new theme system */
+@import 'theme.css';

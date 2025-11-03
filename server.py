@@ -7,7 +7,6 @@ from datetime import datetime
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
 from flask_frozen import Freezer
-from flaskext.markdown import Markdown
 
 # Configuration
 DEBUG = True
@@ -23,7 +22,6 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 pages = FlatPages(app)
 freezer = Freezer(app)
-markdown_manager = Markdown(app, extensions=['fenced_code'], output_format='html5',)
 
 pages_insights = [p for p in pages if p.path.startswith('insights/')]
 pages_arenas = [p for p in pages if p.path.startswith('arenas/')]

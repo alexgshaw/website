@@ -1,38 +1,21 @@
-<table class="leaderboard-table">
+<table>
     <thead>
         <tr>
             <th>Rank</th>
             <th>Model</th>
-            <th>ELO</th>
+            <th style="text-align: right;">ELO</th>
         </tr>
     </thead>
     <tbody>
         {% for entry in leaderboard.board %}
-        <tr>
-            <td>{{ entry.rank }}</td>
-            <td>
-                {% set logos = {
-                    'GPT-5': '/static/images/orgs/openai.svg',
-                    'GPT-5 Mini': '/static/images/orgs/openai.svg',
-                    'o3': '/static/images/orgs/openai.svg',
-                    'Claude Sonnet 4.5': '/static/images/orgs/anthropic.svg',
-                    'Claude Sonnet 4': '/static/images/orgs/anthropic.svg',
-                    'Gemini 2.5 Pro': '/static/images/orgs/google.svg',
-                    'Grok Code Fast': '/static/images/orgs/xai.svg',
-                    'Qwen3 Coder': '/static/images/orgs/qwen.png',
-                } %}
-                <img
-                    src="{{ logos.get(entry.model, '/static/images/orgs/default.svg') }}"
-                    alt="{{ entry.model }} logo"
-                    style="height:1em; vertical-align:middle; margin-right:0.4em; display:inline-block; transform:translateY(-0.12em);"
-                 />
-                {{ entry.model }}
-            </td>
-            <td>{{ entry.elo }} ± {{ entry.elo_std }}</td>
+        <tr{% if entry.rank <= 3 %} class="top-three"{% endif %}>
+            <td class="rank-cell">{{ entry.rank }}</td>
+            <td class="model-cell">{{ entry.model }}</td>
+            <td class="elo-cell">{{ entry.elo }}</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
-<p>
+<p style="padding: 12px 14px; margin: 0;">
     <span class="subtext">Last updated</span> {{ leaderboard.last_updated | format_timestamp }}
 </p>
