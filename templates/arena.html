@@ -15,7 +15,11 @@
 <br>
 
 <div style="text-align: center">
-  Added {{ page['date-added'] }} &bull; {{ page.players }} Players &bull; 
+  <span class="subtext">Introduced</span> {{ page['date-added'] }}
+  &bull;
+  {{ page.players }} <span class="subtext">Players</span>
+  &bull;
+  <span class="subtext">Written in</span>
   {% for lang in page.language.split(', ') %}
     <img
       src="/static/images/languages/{{ lang.lower() }}.svg"

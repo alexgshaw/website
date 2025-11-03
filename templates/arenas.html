@@ -8,11 +8,11 @@
 <div class="arenas-container">
     <div class="arenas-grid">
         {%- for page in pages | sort(attribute='title') %}
-        <a href="{{ url_for("page", path=page.path) }}">
+        <a href="{{ url_for("page", path=page.path) }}" class="arena-link">
             <div class="arena-card">
                 <img src="{{ page.logo }}" alt="{{ page.title }}">
-                <b>{{ page.title }}</b>
-                <p style="margin: 0.5em auto;width:90%;">{{ page.description }}</p>
+                <p class="arena-title">{{ page.title }}</p>
+                <p style="margin: 0.35em 0 0.65em 0;width:90%;">{{ page.description }}</p>
             </div>
         </a>
         {%- endfor %}

@@ -6,6 +6,9 @@
  * Design tokens and CSS variables
  */
 :root {
+  /* Colors */
+  --gray: #6b7280;
+
   /* Layout */
   --container-width: 768px;
 
