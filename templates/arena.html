@@ -7,7 +7,8 @@
     <img
       src="{{ page.logo }}"
       alt="{{ page.title }}"
-      style="height:1.5rem;vertical-align:middle;margin-right:0.1em;display:inline-block;transform:translateY(-0.12em);"
+      class="img-inline"
+      style="height:1.5rem;"
     />
     {{ page.title }}
   </h2>
@@ -40,7 +41,7 @@
     <p style="font-size:0.9em; margin-top:0.5em;width:{{ (page.description_width or 50) }}%;">{{page.description}}</p>
 </div>
 
-<div style="width: 75%; margin: 0 auto; margin-bottom: 2em;">
+<div style="width: 75%; margin: 0 auto;">
   <hr style="margin:1.5em auto;"/>
   <h3>Leaderboard</h3>
   {% include "_leaderboard.html" %}
