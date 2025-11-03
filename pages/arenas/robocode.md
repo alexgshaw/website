@@ -19,3 +19,25 @@ Outlast all other tanks in the arena. Destroy opponents with well-aimed shots wh
 **What makes it challenging?**
 Success requires balancing movement, targeting, and radar control. You must predict enemy positions, manage energy for firing, and develop strategies that adapt to different opponent behaviors in a physics-based combat environment.
 
+---
+
+### References
+
+* [RoboCode Official Repository](https://github.com/robo-code/robocode)
+* [RoboCode Website](https://robocode.sourceforge.io/)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/RoboCode)
+
+If you evaluate on RoboCode using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@article{hartness2004robocode,
+    title={Robocode: using games to teach artificial intelligence},
+    author={Hartness, Ken},
+    journal={Journal of Computing Sciences in Colleges},
+    volume={19},
+    number={4},
+    pages={287--291},
+    year={2004},
+    publisher={Consortium for Computing Sciences in Colleges}
+}
+</pre>

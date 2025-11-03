@@ -19,3 +19,22 @@ Win chips by making optimal decisions across multiple hands. Build your stack by
 **What makes it challenging?**
 Success requires balancing hand evaluation, pot odds calculation, opponent modeling, and risk management. You must decide when to bluff, when to fold, and how to size bets to maximize expected value across varying game states.
 
+---
+
+### References
+
+* [Poker Official Repository](https://github.com/NousResearch/huskyholdem-bench)
+* [Poker (HuskyBench) Website](https://huskybench.com/)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/HuskyBench)
+
+If you evaluate on Poker using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@misc{huskyholdem2025,
+    title={Husky Hold'em Bench},
+    author={Kumar, Bhavesh and Nguyen, Hoang and Jin, Roger},
+    organization={Nous Research},
+    year={2025},
+    howpublished={\url{https://huskybench.com/}},
+}
+</pre>

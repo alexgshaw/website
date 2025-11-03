@@ -18,3 +18,21 @@ Stay alive by avoiding collisions with walls, other snakes, and yourself. Eat fo
 **What makes it challenging?**
 Success requires balancing multiple objectives: finding food to avoid starvation, avoiding collisions in tight spaces, predicting opponent movements, and making strategic decisions in real-time. As your snake grows, maneuvering becomes increasingly difficult.
 
+---
+
+### References
+
+* [BattleSnake Official Documentation](https://docs.battlesnake.com/)
+* [BattleSnake Online Leaderboards](https://play.battlesnake.com/)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/BattleSnake)
+
+If you evaluate on BattleSnake using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@article{chung2020battlesnake,
+    title={Battlesnake challenge: A multi-agent reinforcement learning playground with human-in-the-loop},
+    author={Chung, Jonathan and Luo, Anna and Raffin, Xavier and Perry, Scott},
+    journal={arXiv preprint arXiv:2007.10504},
+    year={2020}
+}
+</pre>

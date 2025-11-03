@@ -18,3 +18,21 @@ Destroy all enemy robots while protecting your own. Victory comes from coordinat
 **What makes it challenging?**
 Success requires crafting logic that positions robots smartly, times attacks effectively, and adapts to opponent strategies. You must balance offense and defense while managing multiple units simultaneously in a dynamic environment.
 
+---
+
+### References
+
+* [RobotRumble GitHub Organization](https://github.com/robot-rumble)
+* [RobotRumble Website](https://robotrumble.org/)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/RobotRumble)
+
+If you evaluate on RobotRumble using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@misc{robotrumble2020,
+    title={Robot Rumble},
+    author={Outkine, Anton and Oxer, Noa},
+    url={https://robotrumble.org/},
+    year={2020},
+}
+</pre>

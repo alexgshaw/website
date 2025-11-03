@@ -19,3 +19,21 @@ Control the most territory by the game's end. Expand your empire by capturing ce
 **What makes it challenging?**
 Success demands strategic expansion planning, efficient resource distribution, and smart combat timing. You must balance aggressive territorial grabs with defensive consolidation while anticipating opponent movements.
 
+---
+
+### References
+
+* [Halite Official Repository](https://github.com/HaliteChallenge/Halite)
+* [Halite Website](https://halite-tournament.fly.dev/)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/Halite)
+
+If you evaluate on Halite using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@misc{halite2016,
+    title={Halite: Two Sigma's first artificial intelligence programming challenge},
+    author={Truell, Michael and Spector, Benjamin},
+    url={https://github.com/HaliteChallenge/Halite},
+    year={2016}
+}
+</pre>

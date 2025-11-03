@@ -19,3 +19,20 @@ Eliminate your rivals by making their code self-terminate. The last warrior runn
 **What makes it challenging?**
 Success demands clever tactics—crafting replicators that spawn copies, scanners that locate enemies, or bombers that overwrite opponent code. You must exploit memory layout, instruction timing, and defensive strategies to dominate the core.
 
+---
+
+### References
+
+* [Core War Official Documentation](https://corewar.co.uk/index.htm)
+* [CodeClash GitHub Repository](https://github.com/orgs/CodeClash-ai/CoreWar)
+
+If you evaluate on Core War using CodeClash, in addition to our work, we recommend the following citation for attribution to the original creators:
+
+<pre>
+@misc{corewar1984,
+    title={Core Wars Guidelines},
+    author={Jones, D.G. and Dewdney, A.K.},
+    url={https://corewar.co.uk/standards/cwg.txt},
+    year={1984},
+}
+</pre>
