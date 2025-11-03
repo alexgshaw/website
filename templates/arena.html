@@ -32,7 +32,11 @@
 <br>
 
 <div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
-    <img src="{{ page.preview }}" style="width:50%; display:block;" alt="{{ page.title }}preview"/>
+    <img
+      src="{{ page.preview }}"
+      style="width:{{ (page.preview_width or 50) }}%; display:block;"
+      alt="{{ page.title }}preview"
+    />
     <p style="font-size:0.9em; margin-top:0.5em;width:50%;">{{page.description}}</p>
 </div>
 
