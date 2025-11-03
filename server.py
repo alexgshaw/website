@@ -2,6 +2,7 @@
 import json
 import os
 import sys
+from datetime import datetime
 
 from flask import Flask, render_template
 from flask_flatpages import FlatPages
@@ -29,10 +30,28 @@ pages_arenas = [p for p in pages if p.path.startswith('arenas/')]
 with open("data/leaderboards.json") as f:
     leaderboards = json.load(f)
 
+# Custom filters
+@app.template_filter('format_timestamp')
+def format_timestamp(timestamp_str):
+    """Format date/timestamp to 'Nov. 4, 2025'"""
+    if not timestamp_str:
+        return timestamp_str
+    try:
+        # Handle both "2025-11-04" and full ISO format "2025-11-04T16:58:27.268231Z"
+        # Convert to string first in case it's a datetime object
+        dt = datetime.fromisoformat(str(timestamp_str).replace('Z', '+00:00'))
+        # Format as "Nov. 4, 2025"
+        month = dt.strftime('%b.')
+        day = str(dt.day)
+        year = str(dt.year)
+        return f"{month} {day}, {year}"
+    except Exception as e:
+        return str(timestamp_str)
+
 # Routes
 @app.route('/')
 def index():
-   return render_template('index.html', leaderboard=leaderboards["ALL"])
+   return render_template('index.html', leaderboard=leaderboards["all"])
 
 @app.route('/<path:path>/')
 def page(path):

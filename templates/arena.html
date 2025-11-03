@@ -15,7 +15,7 @@
 <br>
 
 <div style="text-align: center">
-  <span class="subtext">Introduced</span> {{ page['date-added'] }}
+  <span class="subtext">Introduced</span> {{ page['date-added'] | format_timestamp }}
   &bull;
   {{ page.players }} <span class="subtext">Players</span>
   &bull;
@@ -37,14 +37,14 @@
       style="width:{{ (page.preview_width or 50) }}%; display:block;"
       alt="{{ page.title }}preview"
     />
-    <p style="font-size:0.9em; margin-top:0.5em;width:50%;">{{page.description}}</p>
+    <p style="font-size:0.9em; margin-top:0.5em;width:{{ (page.description_width or 50) }}%;">{{page.description}}</p>
 </div>
 
-<div style="width:75%; margin: 0 auto;">
-{% include "_leaderboard.html" %}
-</div>
-
-<div>
+<div style="width: 75%; margin: 0 auto; margin-bottom: 2em;">
+  <hr style="margin:1.5em auto;"/>
+  <h3>Leaderboard</h3>
+  {% include "_leaderboard.html" %}
+  <hr style="margin:1.5em auto;"/>
   {{page.html|safe}}
 </div>
 {% endblock content %}
