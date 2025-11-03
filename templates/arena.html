@@ -3,9 +3,34 @@
 {% block content %}
 <br>
 <div style="text-align:center;">
-  <h2 style="margin: 0 auto;">{{ page.title }}</h2>
+  <h2 style="margin: 0 auto;">
+    <img
+      src="{{ page.logo }}"
+      alt="{{ page.title }}"
+      style="height:1.5rem; vertical-align:middle; margin-right:0.1em; display:inline-block; transform:translateY(-0.12em);"
+    />
+    {{ page.title }}
+  </h2>
 </div>
 <br>
+
+<div style="text-align: center">
+  Added {{ page['date-added'] }} &bull; {{ page.players }} Players &bull; 
+  {% for lang in page.language.split(', ') %}
+    <img
+      src="/static/images/languages/{{ lang.lower() }}.svg"
+      alt="{{ lang }}"
+      title="{{ lang }}"
+      style="height:1.2rem;width:auto;vertical-align:text-bottom;">
+    {% if not loop.last %} {% endif %}
+  {% endfor %}
+</div>
+<br>
+
+<div style="display:flex;flex-direction:column;align-items:center;text-align:center;">
+    <img src="{{ page.preview }}" style="width:50%; display:block;" alt="{{ page.title }}preview"/>
+    <p style="font-size:0.9em; margin-top:0.5em;width:50%;">{{page.description}}</p>
+</div>
 
 <div style="width:75%; margin: 0 auto;">
 {% include "_leaderboard.html" %}

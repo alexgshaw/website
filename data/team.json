@@ -1,0 +1,56 @@
+{
+    "contributors": [
+        {
+            "name": "John Yang",
+            "role": "Co-Lead",
+            "link": "https://john-b-yang.github.io/"
+        },
+        {
+            "name": "Kilian Lieret",
+            "role": "Co-Lead",
+            "link": "https://www.lieret.net/"
+        },
+        {
+            "name": "Joyce Yang",
+            "role": "Contributor",
+            "link": "https://joycebyang.github.io/"
+        },
+        {
+            "name": "Carlos E. Jimenez",
+            "role": "Contributor",
+            "link": "https://www.carlosejimenez.com/#about"
+        },
+        {
+            "name": "Ofir Press",
+            "role": "Advisor",
+            "link": "https://ofir.io/"
+        },
+        {
+            "name": "Ludwig Schmidt",
+            "role": "Advisor",
+            "link": "https://people.csail.mit.edu/ludwigs/"
+        },
+        {
+            "name": "Diyi Yang",
+            "role": "Advisor",
+            "link": "https://cs.stanford.edu/~diyiy/index.html"
+        }
+    ],
+    "sponsors": [
+        {
+            "name": "Laude Institute",
+            "image": "/static/images/orgs/laude.jpg",
+            "link": "https://www.laude.org/"
+        },
+        {
+            "name": "Andreessen Horowitz",
+            "image": "/static/images/orgs/a16z.png",
+            "link": "https://a16z.com/"
+        },
+        {
+            "name": "Open Philanthropy",
+            "image": "/static/images/orgs/openphil.png",
+            "link": "https://www.openphilanthropy.org/"
+        }
+    ]
+}

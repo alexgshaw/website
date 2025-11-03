@@ -121,3 +121,39 @@ body {
 @media (max-width: 540px) {
     .arenas-grid { grid-template-columns: 1fr; }
 }
+
+/* Team grid - layout only */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* gap: 1rem; */
+    /* padding: 1rem; */
+}
+
+.team-card {
+    display: block;
+    padding: 1.5rem;
+    border: 1px solid #e5e7eb;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    background-color: white;
+}
+
+.team-card:hover {
+    transform: translateY(-4px);
+    /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15); */
+}
+
+.team-name {
+    font-weight: var(--weight-semibold);
+    margin-bottom: 0.25rem;
+}
+
+@media (max-width: 900px) {
+    .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 600px) {
+    .team-grid { grid-template-columns: repeat(2, 1fr); }
+}

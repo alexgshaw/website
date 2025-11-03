@@ -4,4 +4,37 @@
 <div class="hero">
     <h1>Team</h1>
 </div>
+
+<div class="team-grid">
+{% for contributor in data.contributors %}
+    <a href="{{ contributor.link }}" class="team-card">
+        <div class="team-name">{{ contributor.name }}</div>
+        <div style="font-size: 0.9em;">{{ contributor.role }}</div>
+    </a>
+{% endfor %}
+</div>
+
+<div style="width:95%; margin:0 auto; display:flex; flex-direction:column;">
+<p>
+We're excited about future work on CodeClash!
+For general inquiries or collaboration, please email
+{<a href="mailto:johnby@stanford.edu">johnby@stanford.edu</a>,
+<a href="mailto:kl5675@princeton.edu">kl5675@princeton.edu</a>}.
+</p>
+
+<h3 style="margin: 0.5em 0 0.5em 0;">Funding Support</h3>
+CodeClash was built with the support of the following organizations.
+
+<div style="margin-top: 1em; display:flex; gap:1rem; align-items:center; flex-wrap:wrap;">
+{% for sponsor in data.sponsors %}
+    <a href="{{ sponsor.link }}">
+        <img
+            src="{{ sponsor.image }}"
+            alt="{{ sponsor.name }} logo"
+            style="max-height:3em; max-width:100%;border-radius:0.4em;"
+        />
+    </a>
+{% endfor %}
+</div>
+</div>
 {% endblock content %}

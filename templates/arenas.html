@@ -10,7 +10,7 @@
         {%- for page in pages | sort(attribute='title') %}
         <a href="{{ url_for("page", path=page.path) }}">
             <div class="arena-card">
-                <img src="{{ page.image }}" alt="{{ page.title }}">
+                <img src="{{ page.logo }}" alt="{{ page.title }}">
                 <b>{{ page.title }}</b>
                 <p style="margin: 0.5em auto;width:90%;">{{ page.description }}</p>
             </div>

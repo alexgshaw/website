@@ -38,13 +38,11 @@ def index():
 def page(path):
     return render_template('page.html', page=pages.get_or_404(path))
 
-@app.route('/about/')
-def about():
-    return render_template('about.html')
-
 @app.route('/team/')
 def team():
-    return render_template('team.html')
+    with open("data/team.json") as f:
+        team_data = json.load(f)
+    return render_template('team.html', data=team_data)
 
 @app.route('/insights/')
 def insights():
