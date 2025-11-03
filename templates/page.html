@@ -5,8 +5,10 @@
 <div style="text-align:center;">
   <h2>{{ page.title }}</h2>
   <p class="subtext">{{ page.description }}</p>
-  {% if page.time %} <p>{{ page.time }}</p> {% endif %}
+  <span>
+  {% if page.date %}{{ page.date | format_timestamp }} &bull;{% endif %}
   {% if page.authors %}by {{ page.authors }}{% endif %}
+  </span>
 </div>
 <br>
 <hr />
