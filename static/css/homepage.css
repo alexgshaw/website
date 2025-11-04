@@ -22,7 +22,7 @@
 
 .hsubtext {
     font-size: var(--text-md);
-    color: var(--muted);
+    font-weight: var(--weight-semibold);
     margin: 0.5em 0 2em 0;
 }
 

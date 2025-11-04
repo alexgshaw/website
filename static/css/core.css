@@ -7,7 +7,7 @@
  * Design tokens and CSS variables
  */
 :root {
-  --bg: #ffffff;
+  --bg: #fdfdfd;
   --fg: #0b0b0b;
   --border: #e5e7eb;
   --accent: #00cc66;
@@ -24,7 +24,7 @@
   /* Font sizes */
   --text-xs: 0.7rem;    /* 12px */
   --text-sm: 0.8rem;   /* 14px */
-  --text-base: 0.95rem;     /* 16px */
+  --text-base: 0.9rem;     /* 16px */
   --text-md: 1.125rem;   /* 18px */
   --text-lg: 1.25rem;    /* 20px */
   --text-xl: 1.5rem;     /* 24px */
@@ -52,7 +52,7 @@
 }
 
 :root[data-theme="light"] {
-    --bg: #ffffff;
+    --bg: #fdfdfd;
     --fg: #0b0b0b;
     --muted: #5a5f66;
     --border: #e5e7eb;
@@ -83,13 +83,19 @@
 .text-3xl { font-size: var(--text-3xl); }
 
 .hero {
-  background: linear-gradient(to right, #92b4f8, #4289a7);
   display: flex;
   flex-direction: column;
-  height: 150px;
+  height: 100px;
   justify-content: center;
   margin-bottom: 1em;
-  padding: 2rem;
+  padding: 1em 0 1em 2.25em;
+  font-family: var(--font-anta);
+  font-size: var(--text-2xl);
+  background: linear-gradient(135deg, #fdfdfd 0%, #fdfdfd 20%, #01552b 100%);
+}
+
+:root[data-theme="dark"] .hero {
+  background: linear-gradient(135deg, #0b0b0b 0%, #0b0b0b 20%, #026134 100%);
 }
 
 /* Logo styling for dark mode */
