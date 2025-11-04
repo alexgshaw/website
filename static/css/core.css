@@ -6,7 +6,10 @@
  * Design tokens and CSS variables
  */
 :root {
-  /* Colors */
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --border: #e5e7eb;
+  --accent: #00cc66;
   --gray: #6b7280;
 
   /* Layout */
@@ -16,7 +19,7 @@
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   --font-jersey: 'Jersey', serif;
 
-    /* Font sizes */
+  /* Font sizes */
   --text-xs: 0.75rem;    /* 12px */
   --text-sm: 0.875rem;   /* 14px */
   --text-base: 1rem;     /* 16px */
@@ -31,6 +34,39 @@
   --weight-medium: 500;
   --weight-semibold: 600;
   --weight-bold: 700;
+
+  /* Box shadows */
+  --box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg: #0b0c0c;
+        --fg: #e7e9ea;
+        --muted: #9aa2a9;
+        --border: #1f2328;
+        --accent: #00ff88;
+    }
+}
+
+:root[data-theme="light"] {
+    --bg: #ffffff;
+    --fg: #0b0b0b;
+    --muted: #5a5f66;
+    --border: #e5e7eb;
+    --accent: #00cc66;
+    --box-shadow: rgba(0, 0, 0, 0.1);
+    --gray: #6b7280;
+}
+
+:root[data-theme="dark"] {
+    --bg: #0b0c0c;
+    --fg: #e7e9ea;
+    --muted: #9aa2a9;
+    --border: #1f2328;
+    --accent: #00ff88;
+    --box-shadow: rgba(255, 255, 255, 0.15);
+    --gray: #6b7280;
 }
 
 .jersey { font-family: var(--font-jersey); }

@@ -1,22 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero">
-    <div class="hero-header">
-        <h1 class="title" style="font-size: 2.5rem;">Code Arenas</h1>
-    </div>
-</section>
+<div class="hero">
+    <h1>Code Arenas</h1>
+</div>
 
-<div class="container">
-    <div class="cards-grid">
+<div class="arenas-container">
+    <div class="arenas-grid">
         {%- for page in pages | sort(attribute='title') %}
-        <a href="{{ url_for("page", path=page.path) }}" style="border-bottom: none;">
-            <div class="bordered card">
-                <img src="{{ page.logo }}" alt="{{ page.title }}" style="height: 50px; width: auto; max-width: 100%; display: block; margin: 0 auto 1em;">
-                <h3 class="card-title" style="justify-content: center; margin-bottom: 0.5em;">
-                    <span>{{ page.title }}</span>
-                </h3>
-                <p class="card-content" style="text-align: center;">{{ page.description }}</p>
+        <a href="{{ url_for("page", path=page.path) }}" class="arena-link">
+            <div class="arena-card">
+                <img src="{{ page.logo }}" alt="{{ page.title }}">
+                <p class="arena-title">{{ page.title }}</p>
+                <p style="margin: 0.35em 0 0.65em 0;width:90%;">{{ page.description }}</p>
             </div>
         </a>
         {%- endfor %}

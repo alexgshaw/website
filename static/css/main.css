@@ -1,2 +1,4 @@
 /* Main CSS - Importing new theme system */
-@import 'theme.css';
+@import 'core.css';
+@import 'layout.css';
+@import 'homepage.css';

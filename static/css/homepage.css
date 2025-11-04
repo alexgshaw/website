@@ -1,0 +1,63 @@
+.htitle {
+    font-size: var(--text-3xl);
+    font-weight: var(--weight-bold);
+    margin: 0;
+}
+
+.hsubtext {
+    font-size: var(--text-md);
+    color: var(--muted);
+    margin: 0.5em 0 1em 0;
+}
+
+.hsubtitle{
+    font-size: var(--text-xl);
+    color: var(--muted);
+    margin: 0.5em 0;
+}
+
+.h2columns {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    gap: 2rem;
+    margin-top: 0;
+}
+
+.h3columns {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    gap: 2rem;
+    margin-top: 0;
+}
+
+.hfeature {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.hfeature span {
+    font-size: var(--text-md);
+    font-weight: var(--weight-bold);
+}
+
+.hfeature svg {
+    height: 1rem;
+    width: 1rem;
+    vertical-align: middle;
+    margin-right: 0.1em;
+    display: inline-block;
+    transform: translateY(-0.12em);
+    color: var(--accent);
+}
+
+.hfeature p {
+    margin: 0.5em 0 0 0;
+    font-size: var(--text-sm);
+}
+
+.hthesis {
+    width: 70%;
+    margin: 0 auto;
+}

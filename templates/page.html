@@ -1,22 +1,19 @@
 {% extends "base.html" %}
 
 {% block content %}
-<section class="hero">
-  <div class="hero-header">
-    <h1 class="title" style="font-size: 2rem;">{{ page.title }}</h1>
-    <p class="subtitle" style="font-size: 1rem; margin-top: 16px;">
-      <span class="subtext">{{ page.description }}</span>
-    </p>
-    {% if page.time %}
-    <p class="subtitle" style="font-size: 0.9rem; margin-top: 8px;">{{ page.time }}</p>
-    {% endif %}
-    {% if page.authors %}
-    <p class="subtitle" style="font-size: 0.9rem; margin-top: 4px;">by {{ page.authors }}</p>
-    {% endif %}
-  </div>
-</section>
+<br>
+<div style="text-align:center;">
+  <h2>{{ page.title }}</h2>
+  <p class="subtext">{{ page.description }}</p>
+  <span>
+  {% if page.date %}{{ page.date | format_timestamp }} &bull;{% endif %}
+  {% if page.authors %}by {{ page.authors }}{% endif %}
+  </span>
+</div>
+<br>
+<hr />
 
-<div class="story-section">
+<div class="insight-page">
   {{page.html|safe}}
 </div>
 {% endblock content %}
