@@ -143,6 +143,12 @@ nav {
     padding: 0 12px;
 }
 
+/* Leaderboard on arena pages - max 500px wide */
+.container .bordered:has(table) {
+    max-width: 31.25em; /* 500px / 16px base */
+    margin: 0 auto;
+}
+
 .section-title {
     text-align: center;
     font-weight: 800;
@@ -479,6 +485,12 @@ tbody tr:hover {
     margin: 24px auto;
     border: 1px solid var(--border);
     border-radius: 4px;
+}
+
+/* Arena preview image max width */
+.hero + div img {
+    max-width: 500px !important;
+    width: auto !important;
 }
 
 .story-section hr {
