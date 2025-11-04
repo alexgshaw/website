@@ -487,6 +487,15 @@ tbody tr:hover {
     border-radius: 4px;
 }
 
+.story-section img.img-inline {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 0.1em;
+    border: none;
+    border-radius: 0;
+    transform: translateY(-0.12em);
+}
+
 /* Arena preview image max width */
 .hero + div img {
     max-width: 500px !important;
