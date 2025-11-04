@@ -7,22 +7,24 @@
   </div>
 </section>
 
-<div class="container">
-  {% for page in pages | sort(attribute='date', reverse=True) %}
-    <a href="{{ url_for("page", path=page.path) }}" style="text-decoration: none; border-bottom: none;">
-      <div class="bordered finding" style="margin-bottom: 16px;">
-        <h3 class="card-title" style="font-size: 1.15rem; white-space: normal;">
-          <span>{{ page.title }}</span>
-        </h3>
-        <p class="card-content" style="margin-top: 8px;">
-          <span class="subtext">{{ page.date }}</span> &bull; {{ page.description }}
-        </p>
-        <p class="card-content" style="margin-top: 4px;">by {{ page.authors }}</p>
-      </div>
-    </a>
-  {% else %}
-    <p style="text-align: center; color: var(--muted); padding: 40px;">No posts yet!</p>
-  {% endfor %}
+<div class="story-section">
+  <div class="container">
+    {% for page in pages | sort(attribute='date', reverse=True) %}
+      <a href="{{ url_for("page", path=page.path) }}" style="text-decoration: none; border-bottom: none;">
+        <div class="bordered finding" style="margin-bottom: 16px;">
+          <h3 class="card-title" style="font-size: 1.15rem; white-space: normal;">
+            <span>{{ page.title }}</span>
+          </h3>
+          <p class="card-content" style="margin-top: 8px;">
+            <span class="subtext">{{ page.date }}</span> &bull; {{ page.description }}
+          </p>
+          <p class="card-content" style="margin-top: 4px;">by {{ page.authors }}</p>
+        </div>
+      </a>
+    {% else %}
+      <p style="text-align: center; color: var(--muted); padding: 40px;">No posts yet!</p>
+    {% endfor %}
+  </div>
 </div>
 
 {% endblock content %}
