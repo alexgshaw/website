@@ -261,6 +261,8 @@ nav {
     color: inherit;
     cursor: pointer;
     background-color: var(--bg);
+    margin-right: -1px;
+    margin-bottom: -1px;
 }
 
 .team-card:hover {
